@@ -94,6 +94,21 @@
             "./src/Kernel.php"
         ]
     },
+<<<<<<< HEAD
+=======
+    "symfony/mailer": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.3",
+            "ref": "09051cfde49476e3c12cd3a0e44289ace1c75a4f"
+        },
+        "files": [
+            "./config/packages/mailer.yaml"
+        ]
+    },
+>>>>>>> feature/order-system
     "symfony/maker-bundle": {
         "version": "1.63",
         "recipe": {
@@ -116,6 +131,7 @@
             "./config/routes.yaml"
         ]
     },
+<<<<<<< HEAD
     "symfony/twig-bundle": {
         "version": "7.2",
         "recipe": {
@@ -129,6 +145,8 @@
             "./templates/base.html.twig"
         ]
     },
+=======
+>>>>>>> feature/order-system
     "symfony/validator": {
         "version": "7.2",
         "recipe": {

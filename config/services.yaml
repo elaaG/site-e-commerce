@@ -19,6 +19,13 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+<<<<<<< HEAD
 
+=======
+    App\Service\EmailService:
+        arguments:
+            $mailer: '@Symfony\Component\Mailer\MailerInterface'
+           # $twig: '@twig'
+>>>>>>> feature/order-system
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
