@@ -22,6 +22,6 @@ services:
     App\Service\EmailService:
         arguments:
             $mailer: '@Symfony\Component\Mailer\MailerInterface'
-            $twig: '@twig'
+           # $twig: '@twig'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
