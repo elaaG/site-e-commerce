@@ -5,6 +5,10 @@ namespace App\Entity;
 use App\Repository\OrderRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+<<<<<<< HEAD
+=======
+use Doctrine\DBAL\Types\Types;
+>>>>>>> dff57b60e9b8a60fd827e1bfdda0ce85313b4704
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: OrderRepository::class)]
@@ -19,8 +23,13 @@ class Order
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
+<<<<<<< HEAD
     #[ORM\Column(type: 'decimal', scale: 2)]
     private ?float $total = null;
+=======
+    #[ORM\Column(type: 'decimal', precision: 10, scale: 2)] // Keep as string for Doctrine
+    private ?string $total = null;
+>>>>>>> dff57b60e9b8a60fd827e1bfdda0ce85313b4704
 
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
@@ -50,12 +59,20 @@ class Order
         return $this;
     }
 
+<<<<<<< HEAD
     public function getTotal(): ?float
+=======
+    public function getTotal(): ?string // Keep as string (decimal)
+>>>>>>> dff57b60e9b8a60fd827e1bfdda0ce85313b4704
     {
         return $this->total;
     }
 
+<<<<<<< HEAD
     public function setTotal(float $total): self
+=======
+    public function setTotal(string $total): self
+>>>>>>> dff57b60e9b8a60fd827e1bfdda0ce85313b4704
     {
         $this->total = $total;
         return $this;
@@ -83,6 +100,24 @@ class Order
             $this->orderItems[] = $orderItem;
             $orderItem->setOrder($this);
         }
+<<<<<<< HEAD
         return $this;
     }
 }
+=======
+
+        return $this;
+    }
+
+    public function removeOrderItem(OrderItem $orderItem): static
+    {
+        if ($this->orderItems->removeElement($orderItem)) {
+            if ($orderItem->getOrder() === $this) {
+                $orderItem->setOrder(null);
+            }
+        }
+
+        return $this;
+    }
+}
+>>>>>>> dff57b60e9b8a60fd827e1bfdda0ce85313b4704

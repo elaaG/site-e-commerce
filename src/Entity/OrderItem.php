@@ -6,7 +6,12 @@ use App\Repository\OrderItemRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: OrderItemRepository::class)]
+<<<<<<< HEAD
 class OrderItem {
+=======
+class OrderItem
+{
+>>>>>>> dff57b60e9b8a60fd827e1bfdda0ce85313b4704
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
